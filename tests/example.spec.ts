@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async ({ page, context }) => {
   // Navigate to the translator application with longer timeout for network issues
   await page.goto('https://www.swifttranslator.com/', { waitUntil: 'domcontentloaded', timeout: 90000 });
   // Wait for input field to be ready
